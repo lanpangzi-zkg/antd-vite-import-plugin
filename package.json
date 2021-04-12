@@ -1,0 +1,36 @@
+{
+	"name": "antd-vite-import-plugin",
+	"version": "1.0.0",
+	"description": "react + antd 3.x版本在vite中实现按需加载",
+	"main": "antd-vite-import-plugin.js",
+	"files": [
+		"antd-vite-import-plugin.js"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lanpangzi-zkg/antd-vite-import-plugin.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"bugs": {
+		"url": "https://github.com/lanpangzi-zkg/antd-vite-import-plugin/issues"
+	},
+	"keywords": [
+		"react",
+		"antd",
+		"vite"
+	],
+	"author": {
+		"name": "zhangkegui",
+		"email": "1090140795@qq.com"
+	},
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.13.15",
+		"param-case": "^3.0.4"
+	}
+}
