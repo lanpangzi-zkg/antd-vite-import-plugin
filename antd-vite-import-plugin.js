@@ -1,11 +1,10 @@
-import core from "@babel/core";
-import * as t from "@babel/types";
-import { paramCase } from "param-case";
-import babelParser from "@babel/parser";
-import traverse from "@babel/traverse";
+const core = require("@babel/core");
+const t = require("@babel/types");
+const { paramCase } = require("param-case");
+const babelParser = require("@babel/parser");
+const traverse = require("@babel/traverse");
 
 const SUFFIX_QUEUE = ['jsx', 'tsx', 'js', 'ts'];
-
 function antdViteImportPlugin() {
     return {
         name: 'antd-vite-import-plugin',
@@ -15,7 +14,7 @@ function antdViteImportPlugin() {
                     sourceType: "module",
                 });
                 const modifyImports = [];
-                traverse(ast, {
+                traverse.default(ast, {
                     ImportDeclaration(path) {
                         if (path.node.source.value === 'antd') {
                             path.node.specifiers.forEach((specifier) => {
@@ -43,4 +42,5 @@ function antdViteImportPlugin() {
         }
     }
 }
-export default antdViteImportPlugin;
+module.exports = antdViteImportPlugin;
+antdViteImportPlugin['default'] = antdViteImportPlugin;
