@@ -54,7 +54,7 @@ function antdViteImportPlugin() {
                 if (modifyImports.length > 0) {
                     return {
                         code: core.transformFromAstSync(ast).code,
-                        map: this?.getCombinedSourcemap(),
+                        map: this.getCombinedSourcemap && this.getCombinedSourcemap(),
                     }
                 }
             }

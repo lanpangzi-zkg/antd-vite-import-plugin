@@ -1,6 +1,6 @@
 {
 	"name": "antd-vite-import-plugin",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "react + antd 3.x版本在vite中实现按需加载",
 	"main": "antd-vite-import-plugin.js",
 	"files": [
